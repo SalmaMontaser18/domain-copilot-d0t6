@@ -1,0 +1,23 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Data / build
+data/uploads/
+*.log
+dist/
+build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
