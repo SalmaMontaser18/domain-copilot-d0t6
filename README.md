@@ -11,3 +11,8 @@ No starter or template used. Built from scratch.
 
 ## Status
 Work in progress. Full docs coming.
+
+## Quick start
+1. `cp .env.example .env`
+2. `docker compose up --build`
+3. Open http://localhost:8000/health
