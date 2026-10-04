@@ -1,4 +1,4 @@
-from typing import Iterator
+from collections.abc import Iterator
 
 from copilot.application.ports.llm import LLMProvider, LLMResponse, Message, ToolSpec
 from copilot.domain.errors import ProviderUnavailableError

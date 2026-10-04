@@ -1,5 +1,5 @@
 import hashlib
-from typing import Iterator
+from collections.abc import Iterator
 
 from copilot.application.ports.llm import LLMResponse, Message, ToolSpec, Usage
 

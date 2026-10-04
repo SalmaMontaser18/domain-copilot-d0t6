@@ -1,5 +1,6 @@
+from collections.abc import Iterator
 from dataclasses import dataclass, field
-from typing import Iterator, Protocol
+from typing import Protocol
 
 
 @dataclass(frozen=True)
