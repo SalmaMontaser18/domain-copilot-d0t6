@@ -1,7 +1,7 @@
----QA---
+
 # Draft Q&A pairs (to be reviewed before use in the golden set)
 
- ## GL-01
+## GL-01
 **Q1.** What is the standard starting dose of Cardiolan, and how often is it taken?
 **A1.** 5 mg once daily, in the morning (Clause 4.1).
 
@@ -35,7 +35,7 @@
 **A5.** Within 2 weeks (Clause 7.4).
 
 
-## GL-03-v1 (v1.0, superseded)
+## GL-03 (v2.0, current)
 **Q1.** What is the Antibiox dose and duration for mild pneumonia?
 **A1.** 500 mg orally three times daily, every 8 hours, for 5 days (Clause 4.1).
 
@@ -51,7 +51,7 @@
 **Q5.** At what point after starting Antibiox must creatinine and potassium be checked in a patient taking Renaprotect?
 **A5.** At 48 hours (Clause 7.4).
 
-## GL-03 (v2.0, current)
+## GL-03-v1 (v1.0, superseded)
 **Q1.** What is the Antibiox dose and duration for mild pneumonia in this version?
 **A1.** 250 mg orally four times daily, every 6 hours, for 7 days (Clause 4.1).
 
@@ -67,7 +67,7 @@
 **Q5.** At what CRB score must a patient be admitted urgently, and what is the total Antibiox duration for that group?
 **A5.** A CRB score of 2 or higher; 14 days in total (Clauses 3.4 and 4.3).
 
----QA---
+
 ## GL-04
 **Q1.** What is the maximum dose of Pulmavent in 24 hours outside an exacerbation?
 **A1.** 8 puffs (800 micrograms) (Clause 4.4).
