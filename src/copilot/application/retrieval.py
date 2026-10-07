@@ -10,7 +10,8 @@ STOPWORDS = {
     "into", "than", "then", "there", "their", "have", "has", "had", "not", "any",
     "per", "its", "your", "you", "about", "after", "before", "between", "give",
 }
-MIN_COVERAGE = 0.5  # initial value, tuned with the evaluation harness
+MIN_COVERAGE = 0.75  # initial value, tuned with the evaluation harness
+STEM_LENGTH = 5  # "treated" and "treatment" both match on "treat"
 
 
 @dataclass(frozen=True)
@@ -31,9 +32,9 @@ def query_terms(question: str) -> list[str]:
 
 
 def coverage(terms: list[str], text: str) -> float:
-    """Share of the question's terms that appear in the passage."""
+    """Share of the question's terms (matched on their stem) that appear in the passage."""
     lowered = text.lower()
-    return sum(term in lowered for term in terms) / len(terms)
+    return sum(term[:STEM_LENGTH] in lowered for term in terms) / len(terms)
 
 
 class RetrieveEvidence:
