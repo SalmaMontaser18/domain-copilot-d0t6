@@ -47,6 +47,9 @@ caught the problems. Dates are 2026. Entries are added as work happens.
 | 10-03 | Created `data/golden/` inside `data/corpus/source/` by mistake | Created the file while a subfolder was selected | Moved the file to `data/golden/` and removed the nested folder |
 | 10-06 | Content of GL-03 and GL-03-v1 was pasted into the wrong files, and the Q&A headings followed the wrong labels | Pasted two similar documents one after the other | Found by reading the PR diff before merging; swapped the files with `git mv` and checked `version` and `status` with grep |
 | 10-06 | Placeholder text in this log was replaced with another word so a TODO check would pass | Wanted the grep check to stop reporting | Found while resolving a merge conflict; replaced with real content in a follow-up PR |
+| 10-06 | `requirements-dev.txt` was overwritten by `pip freeze` from a venv that lacked the dev tools | Active venv was not the one with the project's tools | Spotted missing ruff and pytest, restored the file from main and appended the new packages |
+| 10-06 | `requirements-dev.txt` was overwritten by `pip freeze` from a venv that lacked the dev tools | Active venv was not the one with the project's tools | Spotted missing ruff and pytest, restored the file from main and appended the new packages |
+| 10-06 | Error classes were appended to `errors.py` twice, so ruff reported F811 redefinitions | Ran the same append step twice | Rewrote the file cleanly and re-ran ruff |
 
 ## 5. How I verify AI output
 

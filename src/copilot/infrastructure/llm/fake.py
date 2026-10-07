@@ -8,13 +8,14 @@ class FakeProvider:
     """Deterministic provider for tests and offline demos. No network."""
 
     name = "fake"
-    DIM = 64
+    DIM = 768
 
     def __init__(self, reply: str = "FAKE_REPLY") -> None:
         self.reply = reply
 
-    def complete(self, messages: list[Message],
-                 tools: list[ToolSpec] | None = None) -> LLMResponse:
+    def complete(
+        self, messages: list[Message], tools: list[ToolSpec] | None = None
+    ) -> LLMResponse:
         return LLMResponse(text=self.reply, usage=Usage(len(messages), 1))
 
     def stream(self, messages: list[Message]) -> Iterator[str]:
@@ -24,5 +25,10 @@ class FakeProvider:
         return [self._vector(t) for t in texts]
 
     def _vector(self, text: str) -> list[float]:
-        digest = hashlib.sha256(text.encode("utf-8")).digest()
-        return [b / 255 for b in (digest * 2)[: self.DIM]]
+        values: list[float] = []
+        counter = 0
+        while len(values) < self.DIM:
+            digest = hashlib.sha256(f"{counter}:{text}".encode()).digest()
+            values.extend(byte / 255 for byte in digest)
+            counter += 1
+        return values[: self.DIM]
